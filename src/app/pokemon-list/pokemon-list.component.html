@@ -29,7 +29,7 @@
     <img  class="loading-icon" src="../../assets/images/dayo3ow-7ac86c31-8b2b-4810-89f2-e6134caf1f2d.gif" alt="asdf">
   </div>
 
-  <app-table *ngIf="(filteredList.length) || filterInput != '' " [pokemonList]="filteredList"></app-table>
+  <app-table *ngIf="(filteredList.length) && filterInput != '' " [pokemonList]="filteredList"></app-table>
 
   <app-table *ngIf="(!filterInput || filterInput === '')"
     [pokemonList]="pokemonList | paginate:page_size:page_number">
