@@ -46,7 +46,7 @@ export class PokemonListComponent implements OnInit, OnChanges {
 
     this.fetchPokemonList(this.generationUrl)  
 
-    console.log(this.loadingIcon)
+    // console.log(this.loadingIcon)
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -92,17 +92,6 @@ export class PokemonListComponent implements OnInit, OnChanges {
     });
   }
 
-  button() {
-    let limit = parseInt(this.generationUrl.limit)
-
-    console.log('limit', limit)
-    console.log('length', this.pokemonList.length)
-
-    if(this.pokemonList.length != limit)
-      console.log('false')
-      else console.log('true');
-  }
-
   loading() {
     let limit = parseInt(this.generationUrl.limit)
     this.loadingIcon = true
@@ -133,9 +122,11 @@ export class PokemonListComponent implements OnInit, OnChanges {
     this.fetchPokemonList(this.generationUrl)  
     sessionStorage.setItem('gen', JSON.stringify(this.generationUrl))
     
+    this.filterInput = null
     this.paginator.firstPage()
-    console.log(this.generationUrl)
+    // console.log(this.generationUrl)
     this.loading()
+
   }
 
   filter() {

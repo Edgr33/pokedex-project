@@ -37,7 +37,7 @@ export class DetailsComponent implements OnInit {
     this.pokemonService.getPokemonDetails(id)
     .subscribe(data => {
       this.pokemonDetails = data
-      console.log('details: ', this.pokemonDetails)
+      // console.log('details: ', this.pokemonDetails)
     })
   }
 
@@ -45,7 +45,7 @@ export class DetailsComponent implements OnInit {
     this.pokemonService.getPokemonSpecies(id)
     .subscribe(data => {
       this.pokemonSpecies = data
-      console.log('species: ',this.pokemonSpecies)
+      // console.log('species: ',this.pokemonSpecies)
     })
   }
 
@@ -69,7 +69,7 @@ export class DetailsComponent implements OnInit {
       this.pokemonService.getPokemonDetails(nextId.toString())
       .subscribe((data: any) => {
         this.nextSprite = data.sprites.front_default      
-        console.log(this.nextSprite)
+        // console.log(this.nextSprite)
       })
     } else this.previousSprite = null
   }
