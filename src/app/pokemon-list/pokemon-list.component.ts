@@ -122,6 +122,7 @@ export class PokemonListComponent implements OnInit, OnChanges {
     this.fetchPokemonList(this.generationUrl)  
     sessionStorage.setItem('gen', JSON.stringify(this.generationUrl))
     
+    this.filterInput = null
     this.filteredList = null
     this.paginator.firstPage()
     // console.log(this.generationUrl)
