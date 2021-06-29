@@ -80,9 +80,12 @@ export class PokemonListComponent implements OnInit, OnChanges {
       .subscribe(data => {
         arrData.push(data)
 
+        
         // this.pokemonList
         if (arrData.length === this.pokemonGet.length){
           this.pokemonList = arrData
+          this.filterInput = null
+          this.filteredList = []
           this.pokemonList.sort((a, b) => {
             return a.id - b.id
           })
@@ -121,9 +124,7 @@ export class PokemonListComponent implements OnInit, OnChanges {
   changeGen() {
     this.fetchPokemonList(this.generationUrl)  
     sessionStorage.setItem('gen', JSON.stringify(this.generationUrl))
-    
-    this.filterInput = null
-    this.filteredList = null
+
     this.paginator.firstPage()
     // console.log(this.generationUrl)
     this.loading()
