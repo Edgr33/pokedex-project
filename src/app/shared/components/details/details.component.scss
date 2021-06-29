@@ -1,0 +1,179 @@
+.cntr {
+  background: rgb(255,255,255);
+  background: linear-gradient(317deg, rgba(255,255,255,1) 1%, rgba(140,209,221,1) 50%, rgba(255,255,255,1) 99%);
+}
+
+.br {
+  border-bottom: 2px solid black;
+  border-style: ridge;
+  font-size: 15px;
+  }
+
+.bl {
+    border-top: 2px solid black;
+    border-style: ridge;
+  }
+
+@media (min-width: 1365px) {
+  .cntr {
+    background: linear-gradient(317deg, rgba(255,255,255,1) 1%, rgba(140,209,221,1) 50%, rgba(255,255,255,1) 99%);
+  }
+  
+  .br {
+  border-right: 2px solid black;
+  border-style: ridge;
+  font-size: 15px;
+  }
+
+  .bl {
+  border-left: 2px solid black;
+  border-style: ridge;
+  }
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.type-badge {
+  padding: 2px 10px;
+  margin-left: 5px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  color: #F8F8F8;
+  font-weight: bold;
+}
+.spacer {
+  margin-left: 5px;
+}
+
+.detail-img {
+  text-align: center;
+}
+
+.detail-portrait {
+  text-align: center;
+  width: 360px;
+}
+
+@media (min-width: 1365px) {
+  .detail-portrait {
+    width: auto;
+  }
+}
+
+.detail-btn {
+  text-decoration: none;
+  width: 140px;
+  background-color: #9F1D21;
+  // margin-left: 10px;
+  margin: 15px 0px;
+  color: white;
+}
+
+.btn-l {
+  margin-right: 5px;
+}
+
+.btn-r {
+  margin-left: 5px;
+}
+
+.detail-btn:hover {
+  transition: 0.3s;
+  background-color: #80161a;
+}
+
+.btn-disabled {
+  pointer-events: none;
+}
+
+.sm-sprite {
+  height: 60px;
+}
+
+/* Badge Backgrounds */
+.bg-normal {
+  background-color: #e9818c;
+}
+
+.bg-fire {
+  background-color: #F08030;
+  color: black;
+}
+
+.bg-water {
+  background-color: #6890F0;
+}
+
+.bg-grass {
+  background-color: #78C850;
+  color: black;
+}
+
+.bg-electric {
+  background-color: #F8D030;
+  color: black;
+}
+
+.bg-ice {
+  background-color: #98D8D8;
+  color: black;
+}
+
+.bg-fighting {
+  background-color: #C03028;
+}
+
+.bg-poison {
+  background-color: #A040A0;
+}
+
+.bg-ground {
+  background-color: #E0C068;
+  color: black;
+}
+
+.bg-flying {
+  background-color: #A890F0;
+}
+
+.bg-psychic {
+  background-color: #F85888;
+}
+
+.bg-bug {
+  background-color: #A8B820;
+}
+
+.bg-rock {
+  background-color: #B8A038;
+}
+
+.bg-ghost {
+  background-color: #705898;
+}
+
+.bg-dark {
+  background-color: #705848;
+}
+
+.bg-dragon {
+  background-color: #7038F8;
+}
+
+.bg-steel {
+  background-color: #B8B8D0;
+  color: black;
+}
+
+.bg-fairy {
+  background-color: #F0B6BC;
+  color: black;
+}

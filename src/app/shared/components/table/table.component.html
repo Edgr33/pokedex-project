@@ -1,0 +1,32 @@
+<div class="row"> 
+  <div class="col-12 col-md-3 d-flex card-border justify-content-center" *ngFor="let pokemon of pokemonList">
+    <a [routerLink]="['/pokemon/', pokemon.id]">
+      <div class="card">
+        <div class="card-header text-center">
+          <h4>#{{pokemon.id}} {{pokemon.name}}</h4>
+          <!-- <img [src]="pokemon.sprites.front_default" class="card-img-top sprite-img">
+          <img [src]="pokemon.sprites.back_default" class="card-img-top sprite-img"> -->
+        </div>
+        <div class="card-img d-flex justify-content-center">
+          <img [src]="pokemon.sprites.other['official-artwork'].front_default" class="card-img-top main-image">
+        </div>
+        <div class="card-body d-flex justify-content-center">
+          <div class="type-badge" 
+          [ngClass]="{'bg-normal': type.type.name==='normal', 'bg-fire': type.type.name==='fire',
+          'bg-water': type.type.name==='water', 'bg-grass': type.type.name==='grass', 
+          'bg-electric': type.type.name==='electric', 'bg-steel': type.type.name==='steel', 
+          'bg-ice': type.type.name==='ice', 'bg-fighting': type.type.name==='fighting', 
+          'bg-poison': type.type.name==='poison', 'bg-fairy': type.type.name==='fairy', 
+          'bg-ground': type.type.name==='ground', 'bg-flying': type.type.name==='flying', 
+          'bg-psychic': type.type.name==='psychic', 'bg-bug': type.type.name==='bug', 
+          'bg-rock': type.type.name==='rock', 'bg-ghost': type.type.name==='ghost', 
+          'bg-dark': type.type.name==='dark', 'bg-dragon': type.type.name==='dragon'}" 
+          
+          *ngFor="let type of pokemon.types">
+            {{type.type.name}}
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

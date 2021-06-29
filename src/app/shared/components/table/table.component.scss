@@ -1,0 +1,152 @@
+.main-image {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  height: 268px;
+  width: auto;
+}
+
+.card {
+  margin-bottom: 20px;
+  width: 19rem;
+  height: 364px;
+}
+
+.card:hover {
+  transition: 0.1s;
+  border: 1px solid black;
+  // height: 380px;
+  width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+.sprite-img {
+  width: 25%;
+  margin-left: 5px;
+}
+
+div.card-header {
+  text-transform: capitalize;
+}
+
+div.card-body {
+  background-color: rgba(0,0,0,.03);
+  padding: 5px 0px;
+}
+
+.type-badge {
+  padding: 2px 10px;
+  margin-left: 5px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  color: #F8F8F8;
+  font-weight: bold;
+  height: 26px;
+}
+.container {
+  background: rgb(255,255,255);
+  background: linear-gradient(317deg, rgba(255,255,255,1) 1%, rgba(140,209,221,1) 50%, rgba(255,255,255,1) 99%);
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+@media (min-width: 1365px) {
+  .container {
+    background: linear-gradient(317deg, rgba(255,255,255,1) 1%, rgba(140,209,221,1) 50%, rgba(255,255,255,1) 99%);
+  }
+}
+
+.card-text {
+  margin: 10px;
+}
+
+mat-paginator {
+  background-color: transparent;
+}
+
+
+/* Badge Backgrounds */
+.bg-normal {
+  background-color: #e9818c;
+}
+
+.bg-fire {
+  background-color: #F08030;
+  color: black;
+}
+
+.bg-water {
+  background-color: #6890F0;
+}
+
+.bg-grass {
+  background-color: #78C850;
+  color: black;
+}
+
+.bg-electric {
+  background-color: #F8D030;
+  color: black;
+}
+
+.bg-ice {
+  background-color: #98D8D8;
+  color: black;
+}
+
+.bg-fighting {
+  background-color: #C03028;
+}
+
+.bg-poison {
+  background-color: #A040A0;
+}
+
+.bg-ground {
+  background-color: #E0C068;
+  color: black;
+}
+
+.bg-flying {
+  background-color: #A890F0;
+}
+
+.bg-psychic {
+  background-color: #F85888;
+}
+
+.bg-bug {
+  background-color: #A8B820;
+}
+
+.bg-rock {
+  background-color: #B8A038;
+}
+
+.bg-ghost {
+  background-color: #705898;
+}
+
+.bg-dark {
+  background-color: #705848;
+}
+
+.bg-dragon {
+  background-color: #7038F8;
+}
+
+.bg-steel {
+  background-color: #B8B8D0;
+  color: black;
+}
+
+.bg-fairy {
+  background-color: #F0B6BC;
+  color: black;
+}

@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<a class="detail-btn mb-3  ms-5" mat-button routerLink="/home">Return</a>
+
+<app-details></app-details>
+
+<div *ngIf="pokemonSpecies && pokemonDetails" class="d-flex justify-content-center">
+  <img *ngIf="previousSprite" class="sm-sprite" [src]="previousSprite" alt="">
+  <a mat-button class="detail-btn btn-l" [disabled]="pokemonDetails.id === 1"
+    [ngClass]="{'btn-disabled': pokemonDetails.id === 1}"
+    [routerLink]="['/pokemon/', pokemonDetails.id - 1]">Previous</a>
+  <a mat-button class="detail-btn btn-r" [disabled]="pokemonDetails.id === 898"
+    [ngClass]="{'btn-disabled': pokemonDetails.id === 898}" [routerLink]="['/pokemon/', pokemonDetails.id + 1]">Next</a>
+  <img class="sm-sprite" [src]="nextSprite" alt="">
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,14 @@
+div {
+  background-image: url("../../../../assets/images/45054.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 0;
+  height: 14%;
+}
+
+@media (min-width: 1365px) {
+  div {
+    height: 45%;
+    margin-bottom: -350px;
+  }
+}

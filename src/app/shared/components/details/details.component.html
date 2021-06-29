@@ -1,0 +1,44 @@
+<div *ngIf="pokemonSpecies && pokemonDetails" class="container cntr">
+  <div class="row">
+    <div class="col br">
+      <div *ngIf="pokemonSpecies && pokemonDetails">
+        <h1>#{{pokemonDetails.id}}</h1>
+        <h1>
+          Name: {{pokemonDetails.name}}
+        </h1>
+        <p>Category: {{pokemonSpecies.genera[7].genus}}</p>
+        <p class="capitalize d-flex flex-row">Types:
+          <span class="spacer type-badge" [ngClass]="{'bg-normal': type.type.name==='normal', 'bg-fire': type.type.name==='fire',
+          'bg-water': type.type.name==='water', 'bg-grass': type.type.name==='grass', 
+          'bg-electric': type.type.name==='electric', 'bg-steel': type.type.name==='steel', 
+          'bg-ice': type.type.name==='ice', 'bg-fighting': type.type.name==='fighting', 
+          'bg-poison': type.type.name==='poison', 'bg-fairy': type.type.name==='fairy', 
+          'bg-ground': type.type.name==='ground', 'bg-flying': type.type.name==='flying', 
+          'bg-psychic': type.type.name==='psychic', 'bg-bug': type.type.name==='bug', 
+          'bg-rock': type.type.name==='rock', 'bg-ghost': type.type.name==='ghost', 
+          'bg-dark': type.type.name==='dark', 'bg-dragon': type.type.name==='dragon'}"
+            *ngFor="let type of pokemonDetails.types">
+            <div>{{type.type.name}}</div>
+          </span>
+        </p>
+        <p class="capitalize d-flex flex-row">Abilities:
+          <span class="spacer d-flex flex-row" *ngFor="let abi of pokemonDetails.abilities; let last = last">
+            {{abi.ability.name}}<div class="spacer" *ngIf="!last">-</div>
+          </span>
+        </p>
+        <p>Height: {{pokemonDetails.height | divider}}m</p>
+        <p>Weight: {{pokemonDetails.weight | divider}}kg</p>
+        <p *ngIf="pokemonSpecies.habitat" class="capitalize">Habitat: {{pokemonSpecies.habitat.name}}</p>
+        <p class="capitalize">Shape: {{pokemonSpecies.shape.name}}</p>
+        <p>Information: {{pokemonSpecies.flavor_text_entries[5].flavor_text | removeArrow}}</p>
+      </div>
+    </div>
+    <div class="col bl detail-img">
+      <img [src]="pokemonDetails.sprites.front_default" alt="">
+      <img [src]="pokemonDetails.sprites.back_default" alt="">
+      <div>
+        <img class="detail-portrait" [src]="pokemonDetails.sprites.other['official-artwork'].front_default" alt="">
+      </div>
+    </div>
+  </div>
+</div>
