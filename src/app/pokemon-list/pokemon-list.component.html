@@ -11,6 +11,8 @@
           <mat-icon matSuffix>search</mat-icon>
           <mat-hint>Hint: Pikachu</mat-hint>
         </mat-form-field>
+        <span *ngIf="!(filteredList.length) && filterInput != '' && filterInput" class="ms-3 sm-txt text-danger d-none d-lg-inline">Text doesn't match any pokemon</span>
+        <span *ngIf="!(filteredList.length) && filterInput != '' && filterInput" class="sm-txt text-danger d-flex d-lg-none justify-content-center">Text doesn't match any pokemon</span>
       </p>
     </div>
     <div class="col" *ngIf="!filterInput || filterInput === ''">
