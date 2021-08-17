@@ -77,6 +77,17 @@ mat-paginator {
   font-weight: 700;
 }
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* Badge Backgrounds */
 .bg-normal {
   background-color: #e9818c;

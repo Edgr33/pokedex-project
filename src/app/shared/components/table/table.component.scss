@@ -4,17 +4,41 @@
   width: auto;
 }
 
-.card {
-  margin-bottom: 20px;
-  width: 19rem;
-  height: 364px;
+.crop-image {
+  display: block;
+  height: 300px;
+  // width: 100%;
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+  }
+}
+
+// .card {
+//   margin-bottom: 20px;
+//   width: 19rem;
+//   height: 364px;
+// }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px 20px;
+}
+
+@media (min-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card:hover {
-  transition: 0.1s;
+  transition: 0.3s;
   border: 1px solid black;
   // height: 380px;
-  width: 320px;
+  // width: 320px;
 }
 
 a {
